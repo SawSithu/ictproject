@@ -1,8 +1,6 @@
 html, body {
-    margin: 5px;
+    margin: 0;
     padding: 0;
-    /* padding-left: .5in;
-    padding-right: .5in; */
     background: black;
     color: white;
     display: flex;
@@ -10,13 +8,15 @@ html, body {
     scroll-behavior: smooth;
     gap: 10px;
 }
+
 .padded {
-    padding-left: .5in;
-    margin-right: .5in;
+    padding-left: 0.5in;
+    padding-right: 0.5in;
 }
-nav{
+
+nav {
     position: fixed;
-    width: calc(100% - 20px - 1in);
+    width: calc(100% - 1in);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -25,70 +25,56 @@ nav{
     font-size: 1.5rem;
     font-family: sans-serif;
 }
-nav span{
+
+nav span {
     padding: 10px;
     position: relative;
 }
-nav a{
+
+nav a {
     color: white;
     text-decoration: none;
 }
-/* nav span a::after{
-    content: '';
-    position: absolute;
-    display: block;
-    background: white;
-    right: 0;
-    width: 0;
-    height: 2px;
-    transition: linear;
-    transition-duration: 150ms;
-} */
-nav a:hover{
-    cursor:pointer;
+
+nav a:hover {
+    cursor: pointer;
     text-shadow: white 0px 0px 5px;
 }
-/* nav span a:hover::after{
-    content: '';
-    position: absolute;
-    display: block;
-    background: white;
-    width: calc(100%);
-    height: 2px;
-    transition: linear;
-    transition-duration: 150ms;
-} */
-#hero{
+
+#hero {
     height: calc(100vh - 20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-shadow: rgba(0, 0, 0, 0.296) 0px 5px 10px;
 }
+
 .button {
     display: inline-block;
     background: white;
     border-radius: 5px;
     padding: 10px;
-    transition: linear;
-    transition-duration: 150ms;
+    transition: transform 150ms linear, box-shadow 150ms linear;
 }
-.button a{
-    color:black;
+
+.button a {
+    color: black;
     text-decoration: none;
-    
 }
+
 .button:hover {
     transform: scale(1.115);
     box-shadow: rgba(0, 0, 0, 0.296) 0px 5px 10px;
 }
+
 #coul {
     height: calc(100vh - 20px);
     background: red;
 }
+
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    html, body {
+    .padded {
         padding-left: 10px;
         padding-right: 10px;
     }
