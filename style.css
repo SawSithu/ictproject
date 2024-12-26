@@ -1,8 +1,8 @@
 html, body {
     margin: 5px;
     padding: 0;
-    padding-left: .5in;
-    padding-right: .5in;
+    /* padding-left: .5in;
+    padding-right: .5in; */
     background: black;
     color: white;
     display: flex;
@@ -10,10 +10,13 @@ html, body {
     scroll-behavior: smooth;
     gap: 10px;
 }
-
+.padded {
+    padding-left: .5in;
+    margin-right: .5in;
+}
 nav{
     position: fixed;
-    width: calc(100% - 20px - 2in);
+    width: calc(100% - 20px - 1in);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -43,8 +46,7 @@ nav a{
 } */
 nav a:hover{
     cursor:pointer;
-    text-shadow: red 0px 0px 0px 5px;
-    text-o
+    text-shadow: white 0px 0px 5px;
 }
 /* nav span a:hover::after{
     content: '';
@@ -83,4 +85,44 @@ nav a:hover{
 #coul {
     height: calc(100vh - 20px);
     background: red;
+}
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    html, body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav {
+        width: calc(100% - 20px);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav span {
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+
+    #hero {
+        text-align: center;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        font-size: 1rem;
+    }
+
+    .button {
+        padding: 5px;
+    }
 }
