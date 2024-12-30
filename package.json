@@ -1,0 +1,17 @@
+{
+  "name": "ict",
+  "version": "1.0.0",
+  "main": "script.js",
+  "type": "module",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "swup": "^4.8.1",
+    "three": "^0.171.0"
+  }
+}

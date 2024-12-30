@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refreshing some javascripts</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <script src="script.js"></script> -->
+    <title>The CIROM - Home page</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav id="nav" class="padded">
         <span class="left">
             <a href="">
-                Logo
+                <img src="./logo.svg" alt="LOGO">
             </a>
         </span>
         <span class="right">
-            <span><a href="#">item</a></span><span><a href="#">item</a></span><span><a href="#">item</a></span><span><a href="#">item</a></span><span><a href="#">item</a></span>
+            <button id="bars" class="bars">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <span class="nitems" id="nitems">
+                <span><a href="./index.html">Home</a></span><span><a href="./learning.html">Learning</a></span><span><a href="#">Game</a></span><span><a href="./about.html">About</a></span>
+            </span>
         </span>
     </nav>
-    <section id="hero" class="padded">
-        <div style="display: flex; flex-direction: column; position: absolute; width: fit-content;">
-            <div style="font-family:Arial, Helvetica, sans-serif;font-size: 5em;line-height: .99em;">
-                Chapter 9 <br> Electricfield
-        </div>
-        <div>
-            <h3 style="font-family: monospace">
-                In this chpater, we will study about electric field
-            </h3>
-        </div>
-        <div style="align-self: flex-end;">
-            <span class="button">
-                <a href="#more">
-                    More about this Chapter
-                </a>
-            </span>
-            <span class="button" style="background: rgb(255, 11, 72);">
-                <a href="#coul" style="color: white;">
-                    Let's study
-                </a>
-            </span>
-        </div>
-        </div>
-    </section>
-    <section id="coul">
-        Hello world
-    </section>
+   <main>
+        <section id="lhero" class="padded">
+            <div class="wrapper-left transition-fade">
+                <h1>
+                   Rotational Motion
+                </h1>
+                <p class="dim">
+                    We will discus over the concepts and equations for rotational motion under constant angular acceleration.
+                </p>
+                <div>
+                    <button class="bold">
+                        <a href="./learning.html">Start Learning</a>
+                    </button>
+                    <button class="bold">
+                        <a href="./EMS.html">To Game</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+   </main>
+   <canvas id="bg"></canvas>
+   <script type="module" src="animations.js"></script>
+    <script type="module"src="script.js"></script>
 </body>
 </html>
